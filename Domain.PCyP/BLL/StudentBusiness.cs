@@ -10,6 +10,7 @@ namespace Domain.PCyP.BLL
 {
     public class StudentBusiness
     {
+        //asd
         public static void Add(Student student)
         {
 
@@ -63,7 +64,7 @@ namespace Domain.PCyP.BLL
             System.IO.StreamReader file_nombres = new System.IO.StreamReader(@"D:\leandro.castro\nombres.txt");
             while ((line_nombre = file_nombres.ReadLine()) != null)
             {
-                
+
             }
                 while ((line_apellido = file_apellidos.ReadLine()) != null)
                 {
