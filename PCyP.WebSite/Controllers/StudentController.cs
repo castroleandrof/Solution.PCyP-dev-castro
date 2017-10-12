@@ -11,7 +11,7 @@ namespace PCyP.WebSite.Controllers
         public ActionResult Index()
         {
             var lista = StudentBusiness.GetStudentList();
-            StudentBusiness.Controller();
+            //StudentBusiness.CargarDato();
             return View(lista);
         }
 

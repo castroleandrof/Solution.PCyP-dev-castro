@@ -23,13 +23,14 @@ namespace Domain.PCyP.DAL
 
         public List<Student> All()
         {
+            IObjectContainer db4o = Db4oFactory.OpenFile(Path);
             var lista = new List<Student>();
-            using (var db = Db4oFactory.OpenFile(Path))
+            using (db4o)
             {
-                var result = db.QueryByExample(new Student());
+                var result = db4o.QueryByExample(new Student());
                 while (result != null && result.HasNext()) lista.Add((Student)result.Next());
 
-                db.Close();
+                db4o.Close();
             }
             return lista;
         }

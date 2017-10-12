@@ -60,6 +60,7 @@
     <Compile Include="Biz\Country.cs" />
     <Compile Include="Biz\EntityBase.cs" />
     <Compile Include="Biz\Student.cs" />
+    <Compile Include="BLL\CargarDatos.cs" />
     <Compile Include="BLL\CategoryBusiness.cs" />
     <Compile Include="BLL\StudentBusiness.cs" />
     <Compile Include="DAL\BaseRepository.cs" />

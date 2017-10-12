@@ -1,6 +1,7 @@
 ﻿using Domain.PCyP.Biz;
 using Domain.PCyP.DAL;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -56,23 +57,9 @@ namespace Domain.PCyP.BLL
             cdal.Delete(student);
         }
 
-        public static void Controller()
-        {
-            string line_nombre, line_apellido;
-            System.IO.StreamReader file_apellidos = new System.IO.StreamReader(@"D:\leandro.castro\apellidos.txt");
-            System.IO.StreamReader file_nombres = new System.IO.StreamReader(@"D:\leandro.castro\nombres.txt");
-            while ((line_nombre = file_nombres.ReadLine()) != null)
-            {
-
-                while ((line_apellido = file_apellidos.ReadLine()) != null)
-                {
-                    Student student = new Student();
-                    student.FirstName = line_nombre;
-                    student.LastName = line_apellido;
-                    Add(student);
-                }
-            }
-
+        public static void CargarDato() {
+            CargarDatos.Controller();
         }
-    }
+       
+}
 }
